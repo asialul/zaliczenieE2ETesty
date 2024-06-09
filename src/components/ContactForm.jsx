@@ -91,22 +91,11 @@ function ContactForm() {
 
   return (
     <>
-      <h2 className="center">Contact Us</h2>
+      <h2 className="center">Zapisz się, aby dostawać nasz newsletter.</h2>
       <form className={classes.form} onSubmit={submitHandler}>
-        <p className={messageIsInvalid ? classes.invalid : undefined}>
-          <label htmlFor="message">Your Message</label>
-          <textarea
-            id="message"
-            rows="5"
-            onChange={changeInputHandler}
-            onBlur={blurInputHandler}
-            required
-            data-cy="contact-input-message"
-          />
-        </p>
         <div className={classes.row}>
           <p className={nameIsInvalid ? classes.invalid : undefined}>
-            <label htmlFor="name">Your Name</label>
+            <label htmlFor="name">Twoje Imię</label>
             <input
               type="text"
               id="name"
@@ -117,7 +106,7 @@ function ContactForm() {
             />
           </p>
           <p className={emailIsInvalid ? classes.invalid : undefined}>
-            <label htmlFor="email">Your Email</label>
+            <label htmlFor="email">Twój Email</label>
             <input
               type="email"
               id="email"
@@ -134,7 +123,7 @@ function ContactForm() {
             data-cy="contact-btn-submit"
             disabled={isSubmitting}
           >
-            {isSubmitting ? 'Sending...' : 'Send Message'}
+            {isSubmitting ? 'Wysyłanie' : 'Wyślij'}
           </button>
         </p>
       </form>
