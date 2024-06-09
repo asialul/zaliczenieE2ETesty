@@ -7,12 +7,10 @@ describe('main page navigation tests', () => {
   
   it('check headings are correct', () => {
     cy.get('main').find('h1').contains(/wybierz szyfr/i)
-    cy.get('ul').should('have.class', 'lista-szyfry').then(el => {
-      expect(el).has.length(2)
-    })
+    cy.get('ul').should('have.class', 'lista-szyfry').then(el => expect(el).has.length(2))
 
   it('check links are correctly defined', () => {
-    
+
   })
   })
 })
