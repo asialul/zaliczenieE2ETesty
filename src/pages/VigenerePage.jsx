@@ -32,7 +32,7 @@ function VigenerePage() {
                 Wpisz słowo-klucz (bez polskich znaków):
             </label><br />
             <input type="text" name="keyword1" value={keyword1} onChange={(e) => setKeyword1(e.target.value)} /> <br />
-            <button type="submit">Zaszyfruj</button>
+            <button type="submit" id="button1">Zaszyfruj</button>
         </form>
         <p id="zaszyfrowane"></p>
         <h1>Odszyfruj:</h1>
