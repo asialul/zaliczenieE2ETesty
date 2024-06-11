@@ -8,6 +8,7 @@ describe('main page navigation tests', () => {
   it('check headings are correct', () => {
     cy.get('main').find('h1').contains(/wybierz szyfr/i)
     cy.get('ul').should('have.class', 'lista-szyfry').then(el => expect(el).has.length(2))
+  })
 
   it('check links are correctly defined', () => {
     cy.get('main').find('[data-cy="main-cezar-link"]').click()
@@ -17,7 +18,6 @@ describe('main page navigation tests', () => {
       expect(loc.pathname).to.eq('/cezar')
     })
     cy.get('[data-cy="header-home-link"]').click()
-    cy.location().should('eq', '/')
-  })
+    cy.location('pathname').should('eq', '/')
   })
 })
