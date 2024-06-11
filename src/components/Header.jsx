@@ -9,10 +9,10 @@ function Header() {
         <nav>
           <ul>
             <li>
-              <Link to="/" data-cy="header-home-link">Home</Link>
+              <Link to="/" data-cy="header-home-link">Główna</Link>
             </li>
             <li>
-              <Link to="/about" data-cy="header-about-link">About</Link>
+              <Link to="/about" data-cy="header-about-link">O nas</Link>
             </li>
           </ul>
         </nav>

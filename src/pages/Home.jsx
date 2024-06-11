@@ -8,11 +8,11 @@ function HomePage() {
         <br />
           <ul className="lista-szyfry">
             <li>
-              <Link to="/cezar" data-cy="main-home-link"><h2>Szyfr Cezara</h2></Link>
+              <Link to="/cezar" data-cy="main-cezar-link"><h2>Szyfr Cezara</h2></Link>
             </li>
             <br />
             <li>
-              <Link to="/vigenere" data-cy="main-home-link"><h2>Szyfr Vigenère’a</h2></Link>
+              <Link to="/vigenere" data-cy="main-vigenere-link"><h2>Szyfr Vigenère’a</h2></Link>
             </li>
           </ul>
       </div>
