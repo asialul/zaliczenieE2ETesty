@@ -12,6 +12,12 @@ describe('vigenere page tests', () => {
     cy.testVigenereEncryption('Janek ma chomika', 'chomik', 'LHBQS OH OPYOPYM')
     cy.testVigenereEncryption('Ala ma kota', 'kot', 'KZT AT YHDO')
   })
+
+  it('test decryption', () => {
+    cy.testVigenereDecryption('QIWAP QS XWS', 'pies', 'Basia ma psa')
+    cy.testVigenereDecryption('LHBQS OH OPYOPYM', 'chomik', 'Janek ma chomika')
+    cy.testVigenereDecryption('KZT AT YHDO', 'kot', 'Ala ma kota')
+  })
     
   
 })

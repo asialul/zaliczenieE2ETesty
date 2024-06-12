@@ -37,7 +37,7 @@ Cypress.Commands.add('testVigenereDecryption', (text, keyword, output) => {
     cy.get('[name="text2"]').type(text)
     cy.get('[name="keyword2"]').type(keyword)
     cy.get('[id="button2"]').click()
-    cy.once('window:alert', t => expect(t).to.contains(output))
+    cy.once('window:alert', t => expect(t).to.contains(output.toUpperCase()))
     cy.get('[name="text2"]').clear()
     cy.get('[name="keyword2"]').clear()
 })
