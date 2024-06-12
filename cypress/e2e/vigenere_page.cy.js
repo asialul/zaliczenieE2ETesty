@@ -5,23 +5,12 @@ describe('vigenere page tests', () => {
     cy.visit('/vigenere')
   })
 
-  it('check encryption1', () => {
-    cy.get('[name="text1"]').type('Ala ma kota')
-    cy.get('[name="keyword1"]').type('kot')
-    cy.get('[id="button1"]').click()
-    cy.on('window:alert', t => {
-      expect(t).to.contains('KZT AT YHDO')
-    })
-  })
+  // testVigenereEncryption and testVigenereDecryption command -> cypress\support\commands.js
 
-    it('check encryption2', () => {
-      cy.get('[name="text1"]').type('Ala ma psa')
-      cy.get('[name="keyword1"]').type('pies')
-      cy.get('[id="button1"]').click()
-      cy.on('window:alert', t => {
-        expect(t).to.contains('KZT AT YHDO')
-      })
-
+  it('test encryption', () => {
+    cy.testVigenereEncryption('Basia ma psa', 'pies', 'QIWAP QS XWS')
+    cy.testVigenereEncryption('Janek ma chomika', 'chomik', 'LHBQS OH OPYOPYM')
+    cy.testVigenereEncryption('Ala ma kota', 'kot', 'KZT AT YHDO')
   })
     
   
