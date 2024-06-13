@@ -10,10 +10,7 @@ const initialState = {
     value: '',
     blurred: false,
   },
-  message: {
-    value: '',
-    blurred: false,
-  },
+
 };
 
 const formReducer = (state, action) => {
@@ -44,14 +41,12 @@ function ContactForm() {
   const [formState, dispatch] = useReducer(formReducer, initialState);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const { name, email, message } = formState;
+  const { name, email} = formState;
   const nameIsValid = name.value.trim() !== '';
   const emailIsValid = email.value.trim() !== '' && email.value.includes('@');
-  const messageIsValid = message.value.trim() !== '';
 
   const nameIsInvalid = !nameIsValid && name.blurred;
   const emailIsInvalid = !emailIsValid && email.blurred;
-  const messageIsInvalid = !messageIsValid && message.blurred;
 
   useEffect(() => {
     if (isSubmitting) {
@@ -82,7 +77,7 @@ function ContactForm() {
   function submitHandler(event) {
     event.preventDefault();
 
-    if (!nameIsValid || !emailIsValid || !messageIsValid) {
+    if (!nameIsValid || !emailIsValid) {
       return;
     }
 
