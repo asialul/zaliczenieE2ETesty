@@ -89,7 +89,7 @@ function ContactForm() {
       <h2 className="center">Zapisz się, aby dostawać nasz newsletter.</h2>
       <form className={classes.form} onSubmit={submitHandler}>
         <div className={classes.row}>
-          <p className={nameIsInvalid ? classes.invalid : undefined}>
+          <p className={nameIsInvalid ? classes.invalid : undefined} id="name-input">
             <label htmlFor="name">Twoje Imię</label>
             <input
               type="text"
@@ -100,7 +100,7 @@ function ContactForm() {
               data-cy="contact-input-name"
             />
           </p>
-          <p className={emailIsInvalid ? classes.invalid : undefined}>
+          <p className={emailIsInvalid ? classes.invalid : undefined} id="email-input">
             <label htmlFor="email">Twój Email</label>
             <input
               type="email"

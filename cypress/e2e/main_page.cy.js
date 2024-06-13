@@ -1,7 +1,5 @@
 describe('main page navigation tests', () => {
 
-  // add command so that you can get through an array of ciphers
-
   beforeEach(() => {
     // base URL - 'http://localhost:5173'
     cy.visit('/')
